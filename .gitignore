@@ -1,11 +1,11 @@
 # Dependencies
-node_modules
+/frontend/node_modules
 /.pnp
 .pnp.js
 
 # Production
-/dist
-/build
+/frontend/dist
+/frontend/build
 
 # Misc
 .DS_Store
@@ -27,4 +27,16 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
-*.sw? 
+*.sw?
+
+# Java
+/backend/target/
+/backend/.idea/
+/backend/*.iml
+/backend/.mvn/
+/backend/mvnw
+/backend/mvnw.cmd
+
+# Database
+*.db
+*.sqlite 
