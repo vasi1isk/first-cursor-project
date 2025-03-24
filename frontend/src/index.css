@@ -10,11 +10,11 @@
 
 @layer components {
   .btn {
-    @apply px-4 py-2 rounded-md font-medium transition-colors;
+    @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200;
   }
   
   .btn-primary {
-    @apply bg-primary-600 text-white hover:bg-primary-700;
+    @apply bg-blue-600 text-white hover:bg-blue-700;
   }
   
   .btn-secondary {
@@ -22,10 +22,79 @@
   }
   
   .input {
-    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+  }
+  
+  .select {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white;
   }
   
   .card {
-    @apply bg-white rounded-lg shadow-md p-6;
+    @apply bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-200 hover:scale-[1.02];
   }
+  
+  .card-image {
+    @apply w-full h-48 object-cover;
+  }
+  
+  .card-content {
+    @apply p-4;
+  }
+  
+  .header {
+    @apply fixed top-0 left-0 right-0 bg-white shadow-sm z-50;
+  }
+  
+  .header-content {
+    @apply container mx-auto px-4 h-16 flex items-center justify-between;
+  }
+  
+  .nav-link {
+    @apply px-4 py-2 text-gray-600 hover:text-gray-900 font-medium;
+  }
+  
+  .nav-link-active {
+    @apply text-blue-600;
+  }
+  
+  .search-bar {
+    @apply container mx-auto px-4 py-6 bg-white shadow-lg rounded-xl -mt-8 relative z-40;
+  }
+  
+  .search-input-group {
+    @apply flex items-center space-x-4;
+  }
+}
+
+/* Дополнительные стили для компонентов */
+.favorite-button {
+  @apply absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-white rounded-full shadow-md cursor-pointer transition-colors duration-200 hover:bg-gray-100;
+}
+
+.rating-badge {
+  @apply inline-flex items-center px-2 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium;
+}
+
+.price-tag {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.distance-badge {
+  @apply text-sm text-gray-500;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
 } 
